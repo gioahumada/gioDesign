@@ -1,27 +1,32 @@
-
-# 🎨 gio Design 
+# 🎨 gioDesign 
 
 This is my design line for future projects, here I will leave the colors I am interested in using in the future. It is very much based on Apple design, but many times the documentation is only found for Figma or Sketch, that's why I decided to gather all the components that matter to me personally here. ☀️
 
-## First palette
+## Color Palette
 
-| Color             | Hex                    | RGB |
-| ----------------- | ---------------------- | - |
-| Blue 1 | ![#005AD6](https://via.placeholder.com/10/005AD6?text=+) #005AD6 | 0, 90, 214
-| Blue 2 | ![#007AFF](https://via.placeholder.com/10/007AFF?text=+) #007AFF | 0, 122, 255|
-| Grey | ![#767679](https://via.placeholder.com/10/767679?text=+) #767679 | 118, 118, 121 |
+The color palette has been carefully selected to provide adequate contrast and a consistent appearance. The main colors used in this project are:
 
-## Alternative palette
+### Grays
+| Color       | Hex       | RGB              | Color Preview          |
+|-------------|-----------|------------------|------------------------|
+| White       | `#FFFFFF` | (255, 255, 255)  | ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) |
+| Light Gray  | `#DDDDDD` | (221, 221, 221)  | ![#DDDDDD](https://via.placeholder.com/15/DDDDDD/000000?text=+) |
+| Gray        | `#AAAAAA` | (170, 170, 170)  | ![#AAAAAA](https://via.placeholder.com/15/AAAAAA/000000?text=+) |
+| Dark Gray   | `#777777` | (119, 119, 119)  | ![#777777](https://via.placeholder.com/15/777777/000000?text=+) |
+| Darker Gray | `#444444` | (68, 68, 68)     | ![#444444](https://via.placeholder.com/15/444444/000000?text=+) |
+| Black       | `#000000` | (0, 0, 0)        | ![#000000](https://via.placeholder.com/15/000000/000000?text=+) |
 
-| Color             | Hex                    | RGB |
-| ----------------- | ---------------------- | - |
-| Pink | ![#ff2d55](https://via.placeholder.com/10/ff2d55?text=+) #ff2d55 | 255, 45, 85
-| Purple | ![#5856d6](https://via.placeholder.com/10/5856d6?text=+) #5856d6 | 88, 86, 214|
-| Orange | ![#ff9500](https://via.placeholder.com/10/ff9500?text=+) #ff9500 |  255, 149, 0 |
-
-Dumped from here https://colorswall.com/palette/40133
-
-
+### Main Colors
+| Color     | Hex       | RGB              | Color Preview          |
+|-----------|-----------|------------------|------------------------|
+| Pink      | `#ff2d55` | (255, 45, 85)    | ![#ff2d55](https://via.placeholder.com/15/ff2d55/000000?text=+) |
+| Purple    | `#5856d6` | (88, 86, 214)    | ![#5856d6](https://via.placeholder.com/15/5856d6/000000?text=+) |
+| Orange    | `#ff9500` | (255, 149, 0)    | ![#ff9500](https://via.placeholder.com/15/ff9500/000000?text=+) |
+| Yellow    | `#ffcc00` | (255, 204, 0)    | ![#ffcc00](https://via.placeholder.com/15/ffcc00/000000?text=+) |
+| Red       | `#ff3b30` | (255, 59, 48)    | ![#ff3b30](https://via.placeholder.com/15/ff3b30/000000?text=+) |
+| Teal Blue | `#5ac8fa` | (90, 200, 250)   | ![#5ac8fa](https://via.placeholder.com/15/5ac8fa/000000?text=+) |
+| Blue      | `#007aff` | (0, 122, 255)    | ![#007aff](https://via.placeholder.com/15/007aff/000000?text=+) |
+| Green     | `#4cd964` | (76, 217, 100)   | ![#4cd964](https://via.placeholder.com/15/4cd964/000000?text=+) |
 
 ## 🔤 Font Family
 
@@ -34,42 +39,38 @@ In order of importance
 - Roboto
 - Helvetica Neue
 - Arial
-## CSS Style
 
-
-**Import colors from First Palette :**
-```
+```css
 :root {
-  --color-blue-1-rgb: 0, 90, 214;
-  --color-blue-2-rgb: 0, 122, 255;
-  --color-grey-rgb: 118, 118, 121;
-  --focus-ring: 0px 0px 0px 4px rgba(var(--color-blue-2-rgb), 0.6);
+    --fonts: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 ```
-*To use remember the var()*
 
-**Fonts Family**
+## 🌑 Shadows
+```css
+--shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.1);
+```
+## Full CSS </>
 
-```
-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-    text-rendering: geometricPrecision;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-```
+```css
+:root {
+    --white: #FFFFFF;
+    --light-gray: #DDDDDD;
+    --gray: #AAAAAA;
+    --dark-gray: #777777;
+    --darker-gray: #444444;
+    --black: #000000;
 
-**Shadow**
-```
-box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.1);
-```
+    --pink: #ff2d55;
+    --purple: #5856d6;
+    --orange: #ff9500;
+    --yellow: #ffcc00;
+    --red: #ff3b30;
+    --teal-blue: #5ac8fa;
+    --blue: #007aff;
+    --green: #4cd964;
 
-**Buttons**
-```
-margin: 7px;
-border-radius: 16px;
-```
-## Soon
+    --fonts: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
-- Light/dark mode toggle colors
-
+    --shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.1);
+}
